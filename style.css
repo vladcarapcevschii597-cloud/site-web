@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html { 
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7f4;
+  color: #202520;
+  line-height: 1.6;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #151915;
+  color: white;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+header h1 { font-size: 30px; letter-spacing: -1px; }
+header h1 span { color: #40d65b; }
+nav { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; }
+nav a { color: white; text-decoration: none; font-weight: bold; transition: color 0.2s; }
+nav a:hover { color: #40d65b; }
+
+.hero {
+  padding: 75px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 45px;
+  background: white;
+}
+.hero-text { flex: 1; }
+.eticheta {
+  color: #22983a;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.hero-text h2 { font-size: clamp(32px, 4vw, 48px); line-height: 1.15; margin-bottom: 20px; color: #151915; }
+.hero-text > p:not(.eticheta) { color: #5c655d; font-size: 18px; margin-bottom: 28px; max-width: 520px; }
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.secondary-btn {
+  background: #151915 !important;
+}
+.secondary-btn:hover {
+  background: #2b332b !important;
+}
+
+.hero-img-container {
+  position: relative;
+  width: 46%;
+  max-width: 540px;
+}
+.hero-svg { 
+  width: 100%; 
+  height: auto;
+  display: block;
+  border-radius: 18px; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+.floating-badge {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  background: #151915;
+  color: #40d65b;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.buton {
+  display: inline-block;
+  background: #29b847;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: background .2s, transform .2s, box-shadow .2s;
+}
+.buton:hover { 
+  background: #188c32; 
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(41,184,71,0.3);
+}
+
+.produse { padding: 70px 8%; text-align: center; }
+.produse h2, .avantaje h2, .contact h2 { font-size: 34px; margin-bottom: 10px; color: #151915; }
+.container-produse { display: flex; justify-content: center; align-items: stretch; gap: 24px; margin-top: 35px; flex-wrap: wrap; }
+
+.card { 
+  background: white; 
+  width: 310px; 
+  overflow: hidden; 
+  text-align: left; 
+  border-radius: 14px; 
+  box-shadow: 0 5px 20px rgba(20,32,20,0.07); 
+  transition: transform .25s, box-shadow .25s; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card:hover { 
+  transform: translateY(-7px); 
+  box-shadow: 0 15px 30px rgba(20,32,20,0.12); 
+}
+.card-img-wrapper {
+  position: relative;
+  background: #ffffff;
+}
+.badge-card {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #151915;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 2;
+}
+.badge-card.best-seller { background: #eab308; color: #151915; }
+.badge-card.pro { background: #f97316; color: #ffffff; }
+
+.card-svg { 
+  width: 100%; 
+  height: 195px; 
+  display: block;
+}
+.card-content { padding: 22px; }
+.card-content h3 { font-size: 22px; margin-bottom: 10px; color: #151915; }
+.card-content p { color: #5c655d; margin-bottom: 6px; font-size: 14px; }
+.card-bottom { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 20px; }
+.pret { color: #22983a; font-size: 20px; font-weight: bold; }
+.nota { margin-top: 30px; font-size: 13px; color: #707970; }
+
+.avantaje { background: #17251a; color: white; text-align: center; padding: 70px 8%; }
+.avantaje .eticheta { color: #54e36b; }
+.container-avantaje { display: flex; justify-content: center; gap: 24px; margin-top: 35px; flex-wrap: wrap; }
+.container-avantaje div { flex: 1; min-width: 220px; background: #243829; padding: 32px 22px; border-radius: 14px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.container-avantaje span { font-size: 36px; display: block; margin-bottom: 10px; }
+.container-avantaje h3 { margin: 10px 0 8px; font-size: 20px; }
+.container-avantaje p { color: #d2ded3; font-size: 14px; }
+
+.review-box {
+  background: #f4f7f4;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: left;
+  flex: 1;
+  min-width: 280px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+.stars { color: #40d65b; font-size: 18px; margin-bottom: 10px; }
+.review-text { font-style: italic; color: #404840; margin-bottom: 15px; }
+.review-author { font-weight: bold; font-size: 14px; }
+
+.contact { padding: 70px 20px; text-align: center; background: #f4f7f4; }
+form { max-width: 480px; margin: 30px auto; padding: 32px; background: white; border-radius: 16px; box-shadow: 0 10px 25px rgba(20,32,20,0.08); text-align: left; }
+form label { display: block; margin: 14px 0 6px; font-weight: bold; font-size: 14px; color: #151915; }
+form input, form select, form textarea { width: 100%; padding: 12px 14px; border: 1px solid #d0d7d0; border-radius: 8px; font: inherit; background: #fafbfa; }
+form input:focus, form select:focus, form textarea:focus { outline: 2px solid #29b847; border-color: #29b847; background: #fff; }
+form button { width: 100%; margin-top: 22px; }
+.contact-info { color: #697269; font-size: 14px; font-weight: 500; }
+
+footer { background: #151915; color: white; text-align: center; padding: 25px; font-size: 14px; }
+
+@media (max-width: 760px) {
+  header { flex-direction: column; position: static; }
+  nav { justify-content: center; gap: 14px; }
+  .hero { flex-direction: column; text-align: center; padding: 45px 6%; }
+  .hero-img-container { width: 100%; }
+  .hero-text > p:not(.eticheta) { margin-left: auto; margin-right: auto; }
+  .hero-buttons { justify-content: center; }
+  .produse, .avantaje { padding: 45px 6%; }
+  .card { width: 100%; max-width: 380px; }
+}
